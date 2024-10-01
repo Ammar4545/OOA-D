@@ -35,7 +35,7 @@ namespace CH1.WellDesignedAppsRock
             return null;
         }
 
-        public Guitar Seach(Guitar searchGuitar)
+        public Guitar Search(Guitar searchGuitar)
         {
             foreach (var guitar in guitars)
             {
