@@ -1,4 +1,6 @@
-﻿namespace CH1.WellDesignedAppsRock
+﻿using CH1.WellDesignedAppsRock.Hepler;
+
+namespace CH1.WellDesignedAppsRock
 {
     public class Program
     {
@@ -7,8 +9,8 @@
             Inventory inventory = new Inventory();
             InitializeInventory(inventory);
 
-            Guitar whatErinLikes = new Guitar("V95693", 1499.95, "fender", "Stratocastor",
-                                          "electric", "Alder", "Alder");
+            Guitar whatErinLikes = new Guitar("", 0, BuilderHelper.ToFriendlyString(Builder.FENDER), "Stratocastor",
+                                          TypeHepler.ToFriendlyString(Typee.ELECTRIC), WoodHelper.ToFriendlyString(WoodHelper.Wood.Alder), WoodHelper.ToFriendlyString(WoodHelper.Wood.Alder));
             Guitar guitar = inventory.Search(whatErinLikes);
 
             if (guitar != null)

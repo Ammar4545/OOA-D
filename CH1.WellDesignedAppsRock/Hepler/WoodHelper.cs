@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CH1.WellDesignedAppsRock.Hepler
 {
-    public static class WoodHelper
+    public class WoodHelper
     {
         public static string ToFriendlyString(Wood wood)
         {

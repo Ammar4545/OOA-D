@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace CH1.WellDesignedAppsRock.Hepler
 {
-    public class TypeHepler
+    public  class TypeHepler
     {
-        public static string ToFriendlyString(Type type)
+        public static string ToFriendlyString(Typee typee)
         {
-            switch (type)
+            switch (typee)
             {
-                case Type.ACOUSTIC:
+                case Typee.ACOUSTIC:
                     return "acoustic";
-                case Type.ELECTRIC:
+                case Typee.ELECTRIC:
                     return "electric";
                 
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                    throw new ArgumentOutOfRangeException(nameof(typee), typee, null);
             }
         }
         
     }
-    public enum Type
+    public enum Typee
     {
-       ACOUSTIC,
+       ACOUSTIC=,
        ELECTRIC
     }
 }
