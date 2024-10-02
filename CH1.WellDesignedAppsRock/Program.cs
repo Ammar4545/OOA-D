@@ -33,7 +33,7 @@ namespace CH1.WellDesignedAppsRock
             // Example:
             //you see all data is ok but we have some different on some prop it may be space in any property
             //or it compares [Fender] to [fender]
-            inventory.AddGuitar("V95693", 1499.95, "Fender", "Stratocastor", "electric", "Alder", "Alder");
+            inventory.AddGuitar("V95693", 1499.95, "Fender", "stratocastor", "electric", "Alder", "Alder");
             inventory.AddGuitar("V9512", 1549.95, "Gibson", "Les Paul", "electric", "Mahogany", "Maple");
             
         }

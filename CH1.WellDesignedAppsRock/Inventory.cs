@@ -46,8 +46,8 @@ namespace CH1.WellDesignedAppsRock
                 if (!string.IsNullOrEmpty(builder) && !builder.Equals(guitar.Builder))
                     continue;
 
-                string model = searchGuitar.Model;
-                if (!string.IsNullOrEmpty(model) && !model.Equals(guitar.Model))
+                string model = searchGuitar.Model.ToLower();
+                if (!string.IsNullOrEmpty(model) && !model.Equals(guitar.Model.ToLower()))
                     continue;
 
                 string type = searchGuitar.Type;
