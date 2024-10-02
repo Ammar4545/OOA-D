@@ -24,8 +24,8 @@ namespace CH1.WellDesignedAppsRock.Hepler
         
     }
     public enum Type
-        {
-           ACOUSTIC,
-           ELECTRIC
-        }
+    {
+       ACOUSTIC,
+       ELECTRIC
+    }
 }
