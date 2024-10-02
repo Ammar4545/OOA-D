@@ -35,13 +35,16 @@ namespace CH1.WellDesignedAppsRock
             return null;
         }
 
-        public Guitar Search(Guitar searchGuitar)
+        public List<Guitar> Search(Guitar searchGuitar)
         {
+            var matchingGuitars= new List<Guitar>();
             foreach (var guitar in guitars)
             {
                 // Ignore serial number since that’s unique
                 // Ignore price since that’s unique
                 //U see that these method is mess as It compare each prop to object in the inventory
+
+                
                 string builder = searchGuitar.Builder;
                 if (!string.IsNullOrEmpty(builder) && !builder.Equals(guitar.Builder))
                     continue;
@@ -62,10 +65,12 @@ namespace CH1.WellDesignedAppsRock
                 if (!string.IsNullOrEmpty(topWood) && !topWood.Equals(guitar.TopWood))
                     continue;
 
-                return guitar; // Return the first matching guitar
+                matchingGuitars.Add(guitar);
+
+                //return matchingGuitars; // Return the first matching guitar
             }
 
-            return null;
+            return matchingGuitars;
 
         }
         
