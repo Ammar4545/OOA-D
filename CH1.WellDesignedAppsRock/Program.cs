@@ -9,7 +9,7 @@ namespace CH1.WellDesignedAppsRock
             Inventory inventory = new Inventory();
             InitializeInventory(inventory);
 
-            Guitar whatErinLikes = new Guitar("", 0, BuilderHelper.ToFriendlyString(Builder.FENDER), "Stratocastor",
+            GuitarSpec whatErinLikes = new GuitarSpec( BuilderHelper.ToFriendlyString(Builder.FENDER), "Stratocastor",
                                           TypeHepler.ToFriendlyString(Typee.ELECTRIC), WoodHelper.ToFriendlyString(WoodHelper.Wood.Alder), WoodHelper.ToFriendlyString(WoodHelper.Wood.Alder));
             List<Guitar> matchingGuitars = inventory.Search(whatErinLikes);
 
@@ -17,11 +17,12 @@ namespace CH1.WellDesignedAppsRock
             {
                 foreach (var guitar in matchingGuitars)
                 {
+                    GuitarSpec spec = guitar.GuitarSpec;
                     Console.WriteLine("Erin, you might like this " +
-                        guitar.Builder + " " + guitar.Model + " " +
-                        guitar.Type + " guitar:\n" +
-                        guitar.BackWood + " back and sides,\n" +
-                        guitar.TopWood + " top.\nYou can have it for only $" +
+                        spec.Builder + " " + spec.Model + " " +
+                        spec.Type + " guitar:\n" +
+                        spec.BackWood + " back and sides,\n" +
+                        spec.TopWood + " top.\nYou can have it for only $" +
                         guitar.Price + "!");
                 }
                 
