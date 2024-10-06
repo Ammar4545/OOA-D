@@ -16,9 +16,9 @@ namespace CH1.WellDesignedAppsRock
             guitars = new List<Guitar>(); 
         }
 
-        public void AddGuitar(string serialNumber, double price, string builder, string model, string type, string backWood, string topWood)
+        public void AddGuitar(string serialNumber, double price, string builder, string model, string type, string backWood, string topWood, int numStrings)
         {
-            GuitarSpec guitarSpec = new GuitarSpec(builder, model, type, backWood,topWood);
+            GuitarSpec guitarSpec = new GuitarSpec(builder, model, type, backWood,topWood, numStrings);
 
             Guitar guitar = new Guitar(serialNumber, price, guitarSpec);
 
@@ -47,29 +47,12 @@ namespace CH1.WellDesignedAppsRock
                 //U see that these method is mess as It compare each prop to object in the inventory
 
                 var guitarSpeac = guitar.GuitarSpec;
-                string builder = searchSpec.Builder;
-                if (!string.IsNullOrEmpty(builder) && !builder.Equals(guitarSpeac.Builder))
-                    continue;
 
-                string model = searchSpec.Model.ToLower();
-                if (!string.IsNullOrEmpty(model) && !model.Equals(guitarSpeac.Model.ToLower()))
-                    continue;
+                if (guitarSpeac.Matches(searchSpec))
+                {
+                    matchingGuitars.Add(guitar);
+                }
 
-                string type = searchSpec.Type;
-                if (!string.IsNullOrEmpty(type) && !type.Equals(guitarSpeac.Type))
-                    continue;
-
-                string backWood = searchSpec.BackWood;
-                if (!string.IsNullOrEmpty(backWood) && !backWood.Equals(guitarSpeac.BackWood))
-                    continue;
-
-                string topWood = searchSpec.TopWood;
-                if (!string.IsNullOrEmpty(topWood) && !topWood.Equals(guitarSpeac.TopWood))
-                    continue;
-
-                matchingGuitars.Add(guitar);
-
-                //return matchingGuitars; // Return the first matching guitar
             }
 
             return matchingGuitars;
