@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CH1.WellDesignedAppsRock", "CH1.WellDesignedAppsRock\CH1.WellDesignedAppsRock.csproj", "{45D17547-3D26-4D10-852C-25420F378602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CH1.WellDesignedAppsRock", "CH1.WellDesignedAppsRock\CH1.WellDesignedAppsRock.csproj", "{45D17547-3D26-4D10-852C-25420F378602}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch2-GatheringRequirements", "Ch2-GatheringRequirements", "{94BCBA21-BC97-43C7-88A4-BC5007C92A6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoor", "DogDoor\DogDoor.csproj", "{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{45D17547-3D26-4D10-852C-25420F378602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45D17547-3D26-4D10-852C-25420F378602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45D17547-3D26-4D10-852C-25420F378602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56} = {94BCBA21-BC97-43C7-88A4-BC5007C92A6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C81953E0-689B-417D-952D-14D07F1EC841}
