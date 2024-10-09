@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DogDoor
+namespace DogDoorUseCase
 {
     public class Remote
     {
@@ -19,11 +19,21 @@ namespace DogDoor
             Console.WriteLine("Pressing the remote contorl bittonn");
 
             if (door.IsOpen())
+            {
                 door.Close();
+            }
 
             else
+            {
                 door.Open();
+                Timer timer = new Timer(CloseDoor,null,2000,Timeout.Infinite);
+            }
             
+           
+        }
+        private void CloseDoor(object state)
+        {
+            door.Close();
         }
     }
 }
