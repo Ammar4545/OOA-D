@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CH1.WellDesignedAppsRock", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ch2-GatheringRequirements", "Ch2-GatheringRequirements", "{94BCBA21-BC97-43C7-88A4-BC5007C92A6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoor", "DogDoor\DogDoor.csproj", "{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogDoor", "DogDoor\DogDoor.csproj", "{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoorUseCase", "DogDoorUseCase\DogDoorUseCase.csproj", "{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{68A4FD17-9B52-4A66-AFE7-8A4F7B459B56} = {94BCBA21-BC97-43C7-88A4-BC5007C92A6A}
+		{2F64799D-B69B-4BD0-A882-E5EB12AAFC0D} = {94BCBA21-BC97-43C7-88A4-BC5007C92A6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C81953E0-689B-417D-952D-14D07F1EC841}
