@@ -13,7 +13,7 @@ namespace DogDoorUseCase
         { 
             this.open = false; 
         }
-        public void Open()
+        public void Open() 
         {
             Console.WriteLine("The dog door opens");
         }
