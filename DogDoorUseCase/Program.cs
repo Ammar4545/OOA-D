@@ -16,7 +16,7 @@
          
             Console.WriteLine("Fido’s back inside...");
 
-            var opened = door.IsOpen();
+            var opened = door.IsOpen(); 
             Console.WriteLine(opened);
         }
     }
