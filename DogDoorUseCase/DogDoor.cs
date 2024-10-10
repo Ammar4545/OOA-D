@@ -15,7 +15,7 @@ namespace DogDoorUseCase
         }
         public void Open() 
         {
-            Console.WriteLine("The dog door opens");
+            Console.WriteLine("The dog door opens"); 
         }
         public void Close()
         {
