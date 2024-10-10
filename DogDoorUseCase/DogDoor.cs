@@ -11,7 +11,7 @@ namespace DogDoorUseCase
         private bool open;
         public DogDoor()
         { 
-            this.open = false;
+            this.open = false; 
         }
         public void Open()
         {
