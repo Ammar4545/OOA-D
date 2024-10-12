@@ -20,7 +20,7 @@
             Console.WriteLine("Fido stuck ouside");
             Console.WriteLine("Fido barking ...");
             var opened = door.IsOpen(); //false
-            Console.WriteLine($"is Door opend {opened}");
+            Console.WriteLine($"is Door opend {opened}");   
             Console.WriteLine("Gina use the remote contoll to open the door.");
             remote.PressButton();
             Console.WriteLine("Fido has gone outside...");
