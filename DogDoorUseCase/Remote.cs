@@ -26,7 +26,7 @@ namespace DogDoorUseCase
             else
             {
                 door.Open();
-                Timer timer = new Timer(CloseDoor,null,2000,Timeout.Infinite);
+                Timer timer = new Timer(CloseDoor,null,5000,Timeout.Infinite);
             }
             
            
@@ -37,3 +37,4 @@ namespace DogDoorUseCase
         }
     }
 }
+
