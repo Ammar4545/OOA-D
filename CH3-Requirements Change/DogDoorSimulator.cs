@@ -12,14 +12,13 @@ namespace CH3_Requirements_Change
         {
             DogDoor door = new DogDoor();
             Remote remote = new Remote(door);
-            //var opened=false;
-            Console.WriteLine("Fido barks to go outside for 6s");
-            remote.PressButton();
-           
-            Console.WriteLine($"is Door opend {door.IsOpen()}");
+            BarkRecognizer barkRecognizer = new BarkRecognizer(door);
+
+            //simulate Bark Recognizer hard ware
+            Console.WriteLine("Fido start barcking ...");
+            barkRecognizer.Recognizer("woof");
 
             Console.WriteLine("Fido has gone outside...");
-
             Console.WriteLine("Fido’s all done...");
 
             //you see that door still open for 5s but fido take 6s now door is closed
@@ -27,12 +26,10 @@ namespace CH3_Requirements_Change
 
             Console.WriteLine("Fido stuck ouside");
             Console.WriteLine("Fido barking ...");
-            door.IsOpen(); //false
-            Console.WriteLine($"is Door opend {door.IsOpen()}");
-            Console.WriteLine("Gina use the remote contoll to open the door.");
+            barkRecognizer.Recognizer("woof");
+            Console.WriteLine($"is Door opend {door.IsOpen()}"); //yes it is opened
 
-            remote.PressButton();
-            Console.WriteLine($"is Door opend {door.IsOpen()}");
+            Console.WriteLine("Gina use the remote contoll to open the door.");
             Console.WriteLine("Fido has back insid...");
         }
      }
