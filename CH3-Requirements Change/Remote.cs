@@ -19,11 +19,22 @@ namespace CH3_Requirements_Change
             Console.WriteLine("Pressing the remote contorl bittonn");
 
             if (door.IsOpen())
+            {
                 door.Close();
+            }
 
             else
+            {
                 door.Open();
+                Timer timer = new Timer(CloseDoor, null, 2000, Timeout.Infinite);
+            }
 
+
+        }
+        private void CloseDoor(object state)
+        {
+            door.Close();
         }
     }
 }
+
