@@ -17,6 +17,7 @@ namespace CH3_Requirements_Change
         {
             open = true;
             Console.WriteLine("The dog door opens");
+            Timer timer = new Timer(CloseDoor, null, 5000, Timeout.Infinite);
         }
         public void Close()
         {
@@ -24,5 +25,10 @@ namespace CH3_Requirements_Change
             Console.WriteLine("The dog door closes");
         }
         public bool IsOpen() => this.open;
+        private void CloseDoor(object state)
+        {
+            open = false;
+        }
     }
+
 }
