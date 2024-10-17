@@ -9,7 +9,7 @@ namespace CH4_Analysis
     public class DogDoor
     {
         private bool open;
-        private Bark allowedBark { get; set; }
+        public Bark allowedBark { get; set; }
         public DogDoor()
         {
             this.open = false;
