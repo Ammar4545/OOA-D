@@ -14,10 +14,18 @@ namespace CH4_Analysis
             this.door = door;
         }
 
-        public void Recognizer(string bark)
+        public void Recognizer(Bark bark)
         {
-            Console.WriteLine($"BarkRecognizer: heard a {bark}");
-            door.Open();
+            if (door.allowedBark.Equals(bark))
+            {
+                Console.WriteLine($"BarkRecognizer: heard a {bark}");
+                door.Open();
+            }
+            else
+            {
+                Console.WriteLine("This dog is not allowed ");
+            }
+            
         }
     }
 }
