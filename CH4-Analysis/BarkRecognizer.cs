@@ -16,15 +16,19 @@ namespace CH4_Analysis
 
         public void Recognizer(Bark bark)
         {
-            if (door.allowedBark.Equals(bark))
+            foreach (var allowedBark in door.allowedBark)
             {
-                Console.WriteLine($"BarkRecognizer: heard a {bark}");
-                door.Open();
+                if (allowedBark.Equals(bark))
+                {
+                    Console.WriteLine($"BarkRecognizer: heard a {bark.GetSound()}");
+                    door.Open();
+                }
+                else
+                {
+                    Console.WriteLine("This dog is not allowed ");
+                }
             }
-            else
-            {
-                Console.WriteLine("This dog is not allowed ");
-            }
+            
             
         }
     }

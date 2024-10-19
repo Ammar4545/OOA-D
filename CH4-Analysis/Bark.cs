@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CH4_Analysis
 {
+    //this class representing the owner's dog's bark then check if it is equal the bark object from Dougs hardware
     public class Bark
     {
         private string sound;

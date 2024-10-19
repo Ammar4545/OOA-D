@@ -11,7 +11,7 @@ namespace CH4_Analysis
         public static void DogDoorTestPath()
         {
             DogDoor door = new DogDoor();
-            door.allowedBark = new Bark("woof");
+            door.AddAllowedBark(new Bark("woof"));
             Remote remote = new Remote(door);
             BarkRecognizer barkRecognizer = new BarkRecognizer(door);
             
