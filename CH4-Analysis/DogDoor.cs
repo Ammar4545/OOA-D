@@ -9,16 +9,20 @@ namespace CH4_Analysis
     public class DogDoor
     {
         private bool open;
-        public Bark allowedBark { get; set; }
+        public List<Bark> allowedBark { get; private set; } = new List<Bark>();
         public DogDoor()
         {
             this.open = false;
+        }
+        public void AddAllowedBark(Bark bark)
+        {
+            allowedBark.Add(bark);
         }
         public void Open()
         {
             open = true;
             Console.WriteLine("The dog door opens");
-            Timer timer = new Timer(CloseDoor, null, 5000, Timeout.Infinite);
+            Timer timer = new Timer(CloseDoor, null, 5000, Timeout.Infinite); //tight coupling
         }
         public void Close()
         {
