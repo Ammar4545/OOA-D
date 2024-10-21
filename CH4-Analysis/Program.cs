@@ -1,10 +1,14 @@
-﻿namespace CH4_Analysis
+﻿using System.Collections.Concurrent;
+
+namespace CH4_Analysis
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            DogDoorSimulator.DogDoorTestPath();
+            //DogDoorSimulator.DogDoorTestPath(true);
+            Console.WriteLine("---------------------------");
+            DogDoorSimulator.DogDoorTestPath(false);
         }
     }
 }

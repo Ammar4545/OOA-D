@@ -22,11 +22,12 @@ namespace CH4_Analysis
                 {
                     Console.WriteLine($"BarkRecognizer: heard a {bark.GetSound()}");
                     door.Open();
+                    return;
                 }
-                else
-                {
-                    Console.WriteLine("This dog is not allowed ");
-                }
+                //else
+                //{
+                //    Console.WriteLine("This dog is not allowed ");
+                //}
             }
             
             
