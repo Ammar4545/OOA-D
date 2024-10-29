@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CH5.GoodDesgin.Helper;
+using CH5.GoodDesgin.Hepler;
+using CH5_Analysis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,43 +9,30 @@ using System.Threading.Tasks;
 
 namespace CH5.GoodDesgin
 {
-    public class GuitarSpec
+    public class GuitarSpec : InstrumentSpec
     {
-        
-        public string Builder { get; private set; }
-        public string Model { get; private set; }
-        public string Type { get; private set; }
-        public string BackWood { get; private set; }
-        public string TopWood { get; private set; }
+      
         public int NumStrings { get; private set; }
   
-        public GuitarSpec( string builder, string model, string type, string backWood, string topWood, int numStrings)
+        public GuitarSpec( Builder builder, string model, Typee type, Wood backWood, Wood topWood, int numStrings):
+            base( builder,  model,  type,  backWood, topWood)
         {
-           
-            this.Builder = builder;
-            this.Model = model;
-            this.Type = type;
-            this.BackWood = backWood;
-            this.TopWood = topWood;
             this.NumStrings = numStrings;
         }
-        public Boolean Matches(GuitarSpec otherSpec)
+        public override bool Matches(InstrumentSpec otherSpec)
         {
             //string builder = searchSpec.Builder;
-            if (!string.IsNullOrEmpty(Builder) && !Builder.Equals(otherSpec.Builder))
+            if (base.Matches(otherSpec))
             { return false; }
 
-            if (!string.IsNullOrEmpty(Model) && !Model.Equals(otherSpec.Model.ToLower()))
+            if (!(otherSpec is GuitarSpec))
             { return false; }
 
-            if (!string.IsNullOrEmpty(Type) && !Type.Equals(otherSpec.Type))
-            { return false; }
-
-            if (!string.IsNullOrEmpty(BackWood) && !BackWood.Equals(otherSpec.BackWood))
-            { return false; }
-
-            if (!string.IsNullOrEmpty(TopWood) && !TopWood.Equals(otherSpec.TopWood))
-            { return false; }
+            GuitarSpec spec = (GuitarSpec)otherSpec;
+            if (NumStrings !=spec.NumStrings)
+            {
+                return false;
+            }
 
             return true;
         }
