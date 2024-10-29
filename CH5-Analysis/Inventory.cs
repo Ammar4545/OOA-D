@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CH5_Analysis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,30 +9,38 @@ namespace CH5.GoodDesgin
 {
     public class Inventory
     {
-        private List<Guitar> guitars;
+        private List<Instrument> _inventory;
 
         public Inventory()
         {
 
-            guitars = new List<Guitar>(); 
+            _inventory = new List<Instrument>(); 
         }
 
-        public void AddGuitar(string serialNumber, double price, string builder, string model, string type, string backWood, string topWood, int numStrings)
+        public void AddInstrument(string serialNumber, double price, InstrumentSpec spec)
         {
-            GuitarSpec guitarSpec = new GuitarSpec(builder, model, type, backWood,topWood, numStrings);
+            Instrument instrument = null;
 
-            Guitar guitar = new Guitar(serialNumber, price, guitarSpec);
-
-            guitars.Add(guitar);
-        }
-
-        public Guitar GetGuitar(string serialNumber)
-        {
-            foreach (var guitar in guitars)
+            if (spec is GuitarSpec)
             {
-                if (guitar.SerialNumber.Equals(serialNumber))
+                instrument=new Guitar(serialNumber, price,(GuitarSpec)spec);
+            }
+            else
+            {
+                instrument = new Mandoline(serialNumber, price, (MandolineSpec)spec);
+            }
+           
+
+            _inventory.Add(instrument);
+        }
+
+        public Instrument GetInstrument(string serialNumber)
+        {
+            foreach (var instrument in _inventory)
+            {
+                if (instrument.serialNumber.Equals(serialNumber))
                 {
-                    return guitar;
+                    return instrument;
                 }
             }
             return null;
@@ -39,26 +48,45 @@ namespace CH5.GoodDesgin
 
         public List<Guitar> Search(GuitarSpec searchSpec)
         {
-            var matchingGuitars= new List<Guitar>();
-            foreach (var guitar in guitars)
+            var matchingGuitars = new List<Guitar>();
+            foreach (var instrument in _inventory)
             {
-                // Ignore serial number since that’s unique
-                // Ignore price since that’s unique
-                //U see that these method is mess as It compare each prop to object in the inventory
+                if (!(instrument is Guitar))
+                {
+                    continue;
+                }
 
-                var guitarSpeac = guitar.GuitarSpec;
-
-                if (guitarSpeac.Matches(searchSpec))
+                Guitar guitar = (Guitar)instrument;
+                if (guitar.spec.Matches(searchSpec))
                 {
                     matchingGuitars.Add(guitar);
                 }
 
             }
-
             return matchingGuitars;
 
         }
-        
+
+        public List<Mandoline> Search(MandolineSpec searchSpec)
+        {
+            var matchingMandolines = new List<Mandoline>();
+            foreach (var instrument in _inventory)
+            {
+                if (!(instrument is Mandoline))
+                {
+                    continue;
+                }
+
+                Mandoline mandoline = (Mandoline)instrument;
+                if (mandoline.spec.Matches(searchSpec))
+                {
+                    matchingMandolines.Add(mandoline);
+                }
+            }
+            return matchingMandolines;
+
+        }
+
 
     }
 }
