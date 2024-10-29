@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CH5.GoodDesgin.Hepler
-{
+namespace CH5.GoodDesgin.Hepler 
+{ 
     
-    public enum Typee
+    public enum Style
     {
-       ACOUSTIC,
-       ELECTRIC
+        A,
+        F
     }
+ 
 }
