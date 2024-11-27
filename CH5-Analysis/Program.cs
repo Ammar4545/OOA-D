@@ -14,7 +14,9 @@ namespace CH5.GoodDesgin
 
             GuitarSpec whatGuitarErinLikes = new GuitarSpec(Builder.FENDER, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Adirondack, 6);
             findInstrument("Erin", whatGuitarErinLikes, inventory);
-            MandolineSpec whatMandolineErinLikes = new MandolineSpec(Builder.FENDER, "Stratocastor",Typee.ELECTRIC, Wood.Alder , Wood.Alder, style:Style.A);
+
+            MandolineSpec whatMandolineErinLikes = new MandolineSpec(Builder.MARTIN, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Adirondack, Style.A);
+            findInstrument("Erin",whatMandolineErinLikes,inventory);
 
             
         }
@@ -93,9 +95,9 @@ namespace CH5.GoodDesgin
         {
             // Add Guitars to the inventory ...
             inventory.AddInstrument("V12345", 1345.55, new GuitarSpec(Builder.FENDER, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Adirondack, 6));
-            inventory.AddInstrument("A21457", 900.55, new GuitarSpec(Builder.COLLINGS, "OakTown Goove", Typee.ACOUSTIC, Wood.BrazilianRosewood, Wood.Cedar, 6));
-            inventory.AddInstrument("V95693", 1499.95, new GuitarSpec(Builder.FENDER, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Alder, 6));
-            inventory.AddInstrument("X54321", 430.54, new GuitarSpec(Builder.MARTIN, "Stratocastor Light", Typee.ELECTRIC, Wood.IndianRosewood, Wood.Maple, 6));
+            inventory.AddInstrument("A21457", 900.55, new GuitarSpec(Builder.COLLINGS, "OakTown Goove", Typee.ACOUSTIC, Wood.BrazilianRosewood, Wood.Cedar,9));
+            inventory.AddInstrument("V95693", 1499.95, new GuitarSpec(Builder.FENDER, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Alder, 10));
+            inventory.AddInstrument("X54321", 430.54, new GuitarSpec(Builder.MARTIN, "Stratocastor Light", Typee.ELECTRIC, Wood.IndianRosewood, Wood.Maple, 7));
             inventory.AddInstrument("X99876", 2000.00, new GuitarSpec(Builder.PRS, "Stratocastor FeatherWeight", Typee.ELECTRIC, Wood.Sitka, Wood.Cocobolo, 6));
             inventory.AddInstrument("V9512", 1549.95, new GuitarSpec(Builder.FENDER, "Stratocastor", Typee.ELECTRIC, Wood.Alder, Wood.Alder, 6));
         }

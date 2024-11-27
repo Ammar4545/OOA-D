@@ -22,7 +22,7 @@ namespace CH5.GoodDesgin
         public override bool Matches(InstrumentSpec otherSpec)
         {
             //string builder = searchSpec.Builder;
-            if (base.Matches(otherSpec))
+            if (!base.Matches(otherSpec))
             { return false; }
 
             if (!(otherSpec is GuitarSpec))
