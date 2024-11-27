@@ -33,7 +33,7 @@ namespace CH5_Analysis
             if (!Builder.Equals(otherSpec.Builder))
             { return false; }
 
-            if (!Model.Equals(otherSpec.Model.ToLower()))
+            if (!Model.Equals(otherSpec.Model))
             { return false; }
 
             if (!Type.Equals(otherSpec.Type))
