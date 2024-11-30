@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CH4-Analysis", "CH4-Analysi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CH5.GoodDesgin", "CH5-Analysis\CH5.GoodDesgin.csproj", "{0347391C-9082-40A2-8A99-127957FF7569}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CH5.Part2", "CH5.Part2\CH5.Part2.csproj", "{004D879F-3A22-4780-9C26-3EE6AFFD1B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{0347391C-9082-40A2-8A99-127957FF7569}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0347391C-9082-40A2-8A99-127957FF7569}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0347391C-9082-40A2-8A99-127957FF7569}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004D879F-3A22-4780-9C26-3EE6AFFD1B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004D879F-3A22-4780-9C26-3EE6AFFD1B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004D879F-3A22-4780-9C26-3EE6AFFD1B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004D879F-3A22-4780-9C26-3EE6AFFD1B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
